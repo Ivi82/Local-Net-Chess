@@ -1,0 +1,61 @@
+﻿<Window x:Class="Chess.ConnectWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:local="clr-namespace:Chess"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        
+	Title="Net Chess ver.MVVM"  BorderThickness="0" Width="350" Height="230" WindowStartupLocation="CenterScreen" WindowState="Normal"
+       FontSize="14">
+
+
+
+       
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            
+        <RowDefinition Height="*"></RowDefinition>
+           
+           
+        </Grid.RowDefinitions>
+
+     
+
+        <TabControl  Grid.Row="0" Grid.Column="0">
+            <TabItem >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="3">Выбор фигур</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock HorizontalAlignment="Center">Вы будете играть</TextBlock>
+                        <TextBlock HorizontalAlignment="Center"></TextBlock>
+                        <RadioButton GroupName="Figures" IsChecked="{Binding CheckStatusWhite}">Белыми</RadioButton>
+             
+                        <RadioButton GroupName="Figures" IsChecked="{Binding CheckStatusBlack}">Черными</RadioButton>
+                        <TextBlock HorizontalAlignment="Center"></TextBlock>
+                        <Button x:Name="acceptButton" Content="   ОК   " IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Top" Command="{Binding PressOkButton}"/>
+                        <TextBlock HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+
+        </TabControl>
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+
+</Window>
