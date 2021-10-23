@@ -6,7 +6,7 @@ namespace Chess
 {
     class Bishop : Figure
     {
-
+        //simple comment string
         internal Bishop(string type, int x, int y, string color, string name, BitmapFrame icon)
 
         {
