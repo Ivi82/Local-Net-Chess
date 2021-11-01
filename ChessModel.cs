@@ -11,15 +11,7 @@ namespace Chess
 
     public class ChessModel
     {
-
-        //~ChessModel()
-        //{
-        //    MessageBox.Show("ChessModel close");
-        //}
-
-
-
-
+       
         internal Figure bp1, bp2, bp3, bp4, bp5, bp6, bp7, bp8, bh1, bh2, bb1, bb2, br1, br2, bk, bq;
         internal Figure wp1, wp2, wp3, wp4, wp5, wp6, wp7, wp8, wh1, wh2, wb1, wb2, wr1, wr2, wk, wq;
 
@@ -376,98 +368,66 @@ namespace Chess
 
                 Figures.Add(bp2 = new Pawn("Pawn", 1, 1, "Black", "BlackPawn2", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute))));
 
-                bp3 = new Pawn("Pawn", 2, 1, "Black", "BlackPawn3", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bp3);
-
-                bp4 = new Pawn("Pawn", 3, 1, "Black", "BlackPawn4", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bp4);
-
-                bp5 = new Pawn("Pawn", 4, 1, "Black", "BlackPawn5", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bp5);
-
-                bp6 = new Pawn("Pawn", 5, 1, "Black", "BlackPawn6", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bp6);
-
-                bp7 = new Pawn("Pawn", 6, 1, "Black", "BlackPawn7", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bp7);
-
-                bp8 = new Pawn("Pawn", 7, 1, "Black", "BlackPawn8", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bp8);
-
-                bh1 = new Horse("Horse", 1, 0, "Black", "BlackHorse1", BitmapFrame.Create(new Uri("bhorse80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bh1);
-
-                bh2 = new Horse("Horse", 6, 0, "Black", "BlackHorse2", BitmapFrame.Create(new Uri("bhorse80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bh2);
-
-                br1 = new Rook("Rook", 0, 0, "Black", "BlackRook1", BitmapFrame.Create(new Uri("brook80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(br1);
-
-                br2 = new Rook("Rook", 7, 0, "Black", "BlackRook2", BitmapFrame.Create(new Uri("brook80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(br2);
-
-                bb1 = new Bishop("Bishop", 2, 0, "Black", "BlackBishop1", BitmapFrame.Create(new Uri("bbishop80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bb1);
-
-                bb2 = new Bishop("Bishop", 5, 0, "Black", "BlackBishop2", BitmapFrame.Create(new Uri("bbishop80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bb2);
-
-                bq = new Queen("Queen", 4, 0, "Black", "BlackQueen", BitmapFrame.Create(new Uri("bqueen80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bq);
-
-                bk = new King("King", 3, 0, "Black", "BlackKing", BitmapFrame.Create(new Uri("bking80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(bk);
-
-
-                wp1 = new Pawn("Pawn", 0, 6, "White", "WhitePawn1", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wp1);
-
-                wp2 = new Pawn("Pawn", 1, 6, "White", "WhitePawn2", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wp2);
-
-                wp3 = new Pawn("Pawn", 2, 6, "White", "WhitePawn3", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wp3);
-
-                wp4 = new Pawn("Pawn", 3, 6, "White", "WhitePawn4", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wp4);
-
-                wp5 = new Pawn("Pawn", 4, 6, "White", "WhitePawn5", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wp5);
-
-                wp6 = new Pawn("Pawn", 5, 6, "White", "WhitePawn6", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wp6);
-
-                wp7 = new Pawn("Pawn", 6, 6, "White", "WhitePawn7", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wp7);
-
-                wp8 = new Pawn("Pawn", 7, 6, "White", "WhitePawn8", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wp8);
-
-                wh1 = new Horse("Horse", 1, 7, "White", "WhiteHorse1", BitmapFrame.Create(new Uri("whorse80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wh1);
-
-                wh2 = new Horse("Horse", 6, 7, "White", "WhiteHorse2", BitmapFrame.Create(new Uri("whorse80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wh2);
-
-                wr1 = new Rook("Rook", 0, 7, "White", "WhiteRook1", BitmapFrame.Create(new Uri("wrook80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wr1);
-
-                wr2 = new Rook("Rook", 7, 7, "White", "WhiteRook2", BitmapFrame.Create(new Uri("wrook80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wr2);
-
-                wb1 = new Bishop("Bishop", 2, 7, "White", "WhiteBishop1", BitmapFrame.Create(new Uri("wbishop80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wb1);
-
-                wb2 = new Bishop("Bishop", 5, 7, "White", "WhiteBishop2", BitmapFrame.Create(new Uri("wbishop80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wb2);
-
-                wq = new Queen("Queen", 4, 7, "White", "WhiteQueen", BitmapFrame.Create(new Uri("wqueen80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wq);
-
-                wk = new King("King", 3, 7, "White", "WhiteKing", BitmapFrame.Create(new Uri("wking80.png", UriKind.RelativeOrAbsolute)));
-                Figures.Add(wk);
-
-
+                Figures.Add(bp3 = new Pawn("Pawn", 2, 1, "Black", "BlackPawn3", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute))));
+                
+                Figures.Add(bp4 = new Pawn("Pawn", 3, 1, "Black", "BlackPawn4", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bp5 = new Pawn("Pawn", 4, 1, "Black", "BlackPawn5", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute))));
+                
+                Figures.Add(bp6 = new Pawn("Pawn", 5, 1, "Black", "BlackPawn6", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bp7 = new Pawn("Pawn", 6, 1, "Black", "BlackPawn7", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bp8 = new Pawn("Pawn", 7, 1, "Black", "BlackPawn8", BitmapFrame.Create(new Uri("bpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bh1 = new Horse("Horse", 1, 0, "Black", "BlackHorse1", BitmapFrame.Create(new Uri("bhorse80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bh2 = new Horse("Horse", 6, 0, "Black", "BlackHorse2", BitmapFrame.Create(new Uri("bhorse80.png", UriKind.RelativeOrAbsolute))));
+              
+                Figures.Add(br1 = new Rook("Rook", 0, 0, "Black", "BlackRook1", BitmapFrame.Create(new Uri("brook80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(br2 = new Rook("Rook", 7, 0, "Black", "BlackRook2", BitmapFrame.Create(new Uri("brook80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bb1 = new Bishop("Bishop", 2, 0, "Black", "BlackBishop1", BitmapFrame.Create(new Uri("bbishop80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bb2 = new Bishop("Bishop", 5, 0, "Black", "BlackBishop2", BitmapFrame.Create(new Uri("bbishop80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bq = new Queen("Queen", 4, 0, "Black", "BlackQueen", BitmapFrame.Create(new Uri("bqueen80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(bk = new King("King", 3, 0, "Black", "BlackKing", BitmapFrame.Create(new Uri("bking80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wp1 = new Pawn("Pawn", 0, 6, "White", "WhitePawn1", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wp2 = new Pawn("Pawn", 1, 6, "White", "WhitePawn2", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute))));
+                
+                Figures.Add(wp3 = new Pawn("Pawn", 2, 6, "White", "WhitePawn3", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wp4 = new Pawn("Pawn", 3, 6, "White", "WhitePawn4", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wp5 = new Pawn("Pawn", 4, 6, "White", "WhitePawn5", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute))));
+              
+                Figures.Add(wp6 = new Pawn("Pawn", 5, 6, "White", "WhitePawn6", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wp7 = new Pawn("Pawn", 6, 6, "White", "WhitePawn7", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wp8 = new Pawn("Pawn", 7, 6, "White", "WhitePawn8", BitmapFrame.Create(new Uri("wpawn80.png", UriKind.RelativeOrAbsolute))));
+              
+                Figures.Add(wh1 = new Horse("Horse", 1, 7, "White", "WhiteHorse1", BitmapFrame.Create(new Uri("whorse80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wh2 = new Horse("Horse", 6, 7, "White", "WhiteHorse2", BitmapFrame.Create(new Uri("whorse80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wr1 = new Rook("Rook", 0, 7, "White", "WhiteRook1", BitmapFrame.Create(new Uri("wrook80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wr2 = new Rook("Rook", 7, 7, "White", "WhiteRook2", BitmapFrame.Create(new Uri("wrook80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wb1 = new Bishop("Bishop", 2, 7, "White", "WhiteBishop1", BitmapFrame.Create(new Uri("wbishop80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wb2 = new Bishop("Bishop", 5, 7, "White", "WhiteBishop2", BitmapFrame.Create(new Uri("wbishop80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wq = new Queen("Queen", 4, 7, "White", "WhiteQueen", BitmapFrame.Create(new Uri("wqueen80.png", UriKind.RelativeOrAbsolute))));
+               
+                Figures.Add(wk = new King("King", 3, 7, "White", "WhiteKing", BitmapFrame.Create(new Uri("wking80.png", UriKind.RelativeOrAbsolute))));
+               
             }
 
             else
