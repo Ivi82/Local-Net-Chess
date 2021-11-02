@@ -1,11 +1,9 @@
-﻿
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Media.Imaging;
 
 namespace Chess
 {
-
-    class Figure : IFalseAndMessage // internal - доступен из любого места текущей сборки. недоступен для др.программ и сборок 
+    abstract class Figure : IFalseAndMessage // internal - доступен из любого места текущей сборки. недоступен для др.программ и сборок
     {
         internal BitmapFrame Icon { get; set; }
         internal int x { get; set; }
@@ -16,35 +14,16 @@ namespace Chess
         internal string Color;
         internal string Name;
 
+        internal abstract bool Attack(ObservableCollection<Figure> Figures, int number, string methodMode);
 
+        internal abstract bool IsStepOn(ObservableCollection<Figure> Figures, int x, int y, string methodMode);
 
-        internal virtual bool Attack(ObservableCollection<Figure> Figures, int number, string methodMode)
-        {
-            return false;
-        }
-
-        internal virtual bool IsStepOn(ObservableCollection<Figure> Figures, int x, int y, string methodMode)
-        {
-            return false;
-        }
-
-        internal virtual bool Step(ObservableCollection<Figure> Figures, int x, int y, string methodMode)
-        {
-            return false;
-        }
+        internal abstract bool Step(ObservableCollection<Figure> Figures, int x, int y, string methodMode);
 
         public bool FalseAndMessage(string message, string methodMode)
         {
             if (methodMode == "Active") InformationMessage.Set(message);
             return false;
         }
-
-
-
     }
-
-
-
-
-
 }
