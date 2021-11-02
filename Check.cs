@@ -61,7 +61,6 @@ namespace Chess
                                         {
                                             int f = Figures[numberOfKing].x + i3;
 
-                                            //if (Figures[i4].Color == Figures[numberOfKing].Color) MessageBox.Show("поиск по х = " + f + " " + Figures[i4].Name);
                                             if (Figures[i4].Color == Figures[numberOfKing].Color && Figures[i4].Step(Figures, Figures[numberOfKing].x + i3, Figures[numberOfKing].y, "Check") == true)
                                             {
                                                 //  MessageBox.Show("Можно поставить " + Figures[i4].Name);
@@ -79,7 +78,6 @@ namespace Chess
                                         for (int i4 = 0; i4 < Figures.Count; i4++)
                                         {
                                             int f = Figures[numberOfDangerFigure].x + i3;
-                                            // if (Figures[i4].Color == Figures[numberOfKing].Color) MessageBox.Show("поиск по х = " + f + " " + Figures[i4].Name);
 
                                             if (Figures[i4].Color == Figures[numberOfKing].Color && Figures[i4].Step(Figures, Figures[numberOfDangerFigure].x + i3, Figures[numberOfKing].y, "Check") == true)
                                             {
@@ -99,21 +97,17 @@ namespace Chess
                             int verticalRange = Math.Abs(Figures[numberOfKing].y - Figures[numberOfDangerFigure].y);
                             verticalRange--;
 
-                            // MessageBox.Show("верт.диапазон = " + verticalRange);
                             if (verticalRange > 0)
                             {
                                 for (int i3 = 1; i3 <= verticalRange; i3++)
                                 {
                                     if (Figures[numberOfDangerFigure].y > Figures[numberOfKing].y)
                                     {
-                                        // MessageBox.Show("y опасной " + Figures[numberOfDangerFigure].y + " > " + "y короля " + Figures[numberOfKing].y);
-
                                         // Проверка для всех своих фигур в цикле
                                         for (int i4 = 0; i4 < Figures.Count; i4++)
                                         {
                                             int f = Figures[numberOfKing].y + i3;
 
-                                            //if (Figures[i4].Color == Figures[numberOfKing].Color) MessageBox.Show("поиск по y = " + f + " " + Figures[i4].Name);
                                             if (Figures[i4].Color == Figures[numberOfKing].Color && Figures[i4].Step(Figures, Figures[numberOfKing].x, Figures[numberOfKing].y + i3, "Check") == true)
                                             {
                                                 //  MessageBox.Show("Можно поставить " + Figures[i4].Name);
@@ -124,18 +118,16 @@ namespace Chess
 
                                     if (Figures[numberOfDangerFigure].y < Figures[numberOfKing].y)
                                     {
-                                        // MessageBox.Show("y опасной " + Figures[numberOfDangerFigure].y + " < " + "y короля " + Figures[numberOfKing].y);
-
                                         // Проверка для всех своих фигур в цикле
                                         for (int i4 = 0; i4 < Figures.Count; i4++)
                                         {
                                             int f = Figures[numberOfDangerFigure].y + i3;
-                                            //if (Figures[i4].Color == Figures[numberOfKing].Color) MessageBox.Show("поиск по y = " + f + " " + Figures[i4].Name);
+                                            ;
 
                                             if (Figures[i4].Color == Figures[numberOfKing].Color && Figures[i4].Step(Figures, Figures[numberOfDangerFigure].x, Figures[numberOfDangerFigure].y + i3, "Check") == true)
                                             {
                                                 // MessageBox.Show("Можно поставить " + Figures[i4].Name);
-                                                return 2;//true;
+                                                return 2;
                                             }
                                         }
                                     }
@@ -151,8 +143,6 @@ namespace Chess
                             int verticalRange = Math.Abs(Figures[numberOfKing].x - Figures[numberOfDangerFigure].x);
                             verticalRange--;
 
-                            // MessageBox.Show("диагон.диапазон = " + verticalRange);
-
                             if (verticalRange > 0)
                             {
                                 // Диагональ -x -y
@@ -160,20 +150,16 @@ namespace Chess
                                 {
                                     for (int i3 = 1; i3 <= verticalRange; i3++)
                                     {
-                                        //MessageBox.Show("y опасной " + Figures[numberOfDangerFigure].y + " > " + "y короля " + Figures[numberOfKing].y);
-
                                         // Проверка для всех своих фигур в цикле
                                         for (int i4 = 0; i4 < Figures.Count; i4++)
                                         {
                                             int yt = Figures[numberOfDangerFigure].y + i3; //
                                             int xt = Figures[numberOfDangerFigure].x + i3; //
 
-                                            // if (Figures[i4].Color == Figures[numberOfKing].Color) MessageBox.Show("поиск по x = " + xt + " и y " + yt + " для " + Figures[i4].Name);
-
                                             if (Figures[i4].Color == Figures[numberOfKing].Color && Figures[i4].Step(Figures, Figures[numberOfDangerFigure].x + i3, Figures[numberOfDangerFigure].y + i3, "Check") == true)
                                             {
                                                 //  MessageBox.Show("На диагональ можно поставить " + Figures[i4].Name);
-                                                return 2;// true;
+                                                return 2;
                                             }
                                         }
                                     }
@@ -184,20 +170,16 @@ namespace Chess
                                 {
                                     for (int i3 = 1; i3 <= verticalRange; i3++)
                                     {
-                                        // MessageBox.Show("y опасной " + Figures[numberOfDangerFigure].y + " > " + "y короля " + Figures[numberOfKing].y);
-
                                         // Проверка для всех своих фигур в цикле
                                         for (int i4 = 0; i4 < Figures.Count; i4++)
                                         {
                                             int yt = Figures[numberOfDangerFigure].y - i3; //
                                             int xt = Figures[numberOfDangerFigure].x + i3; //
 
-                                            //if (Figures[i4].Color == Figures[numberOfKing].Color) MessageBox.Show("поиск по x = " + xt + " и y " + yt + " для " + Figures[i4].Name);
-
                                             if (Figures[i4].Color == Figures[numberOfKing].Color && Figures[i4].Step(Figures, Figures[numberOfDangerFigure].x + i3, Figures[numberOfDangerFigure].y - i3, "Check") == true)
                                             {
                                                 // MessageBox.Show("На диагональ можно поставить " + Figures[i4].Name);
-                                                return 2; //true;
+                                                return 2;
                                             }
                                         }
                                     }
@@ -208,20 +190,16 @@ namespace Chess
                                 {
                                     for (int i3 = 1; i3 <= verticalRange; i3++)
                                     {
-                                        //MessageBox.Show("y опасной " + Figures[numberOfDangerFigure].y + " > " + "y короля " + Figures[numberOfKing].y);
-
                                         // Проверка для всех своих фигур в цикле
                                         for (int i4 = 0; i4 < Figures.Count; i4++)
                                         {
                                             int yt = Figures[numberOfDangerFigure].y + i3; //
                                             int xt = Figures[numberOfDangerFigure].x - i3; //
 
-                                            //if (Figures[i4].Color == Figures[numberOfKing].Color) MessageBox.Show("поиск по x = " + xt + " и y " + yt + " для " + Figures[i4].Name);
-
                                             if (Figures[i4].Color == Figures[numberOfKing].Color && Figures[i4].Step(Figures, Figures[numberOfDangerFigure].x - i3, Figures[numberOfDangerFigure].y + i3, "Check") == true)
                                             {
                                                 //  MessageBox.Show("На диагональ можно поставить " + Figures[i4].Name);
-                                                return 2; //true;
+                                                return 2;
                                             }
                                         }
                                     }
@@ -232,20 +210,16 @@ namespace Chess
                                 {
                                     for (int i3 = 1; i3 <= verticalRange; i3++)
                                     {
-                                        // MessageBox.Show("y опасной " + Figures[numberOfDangerFigure].y + " > " + "y короля " + Figures[numberOfKing].y);
-
                                         // Проверка для всех своих фигур в цикле
                                         for (int i4 = 0; i4 < Figures.Count; i4++)
                                         {
                                             int yt = Figures[numberOfDangerFigure].y - i3; //
                                             int xt = Figures[numberOfDangerFigure].x - i3; //
 
-                                            // if (Figures[i4].Color == Figures[numberOfKing].Color) MessageBox.Show("поиск по x = " + xt + " и y " + yt + " для " + Figures[i4].Name);
-
                                             if (Figures[i4].Color == Figures[numberOfKing].Color && Figures[i4].Step(Figures, Figures[numberOfDangerFigure].x - i3, Figures[numberOfDangerFigure].y - i3, "Check") == true)
                                             {
                                                 //  MessageBox.Show("На диагональ можно поставить " + Figures[i4].Name);
-                                                return 2; //true;
+                                                return 2;
                                             }
                                         }
                                     }
@@ -258,7 +232,7 @@ namespace Chess
                 }
             }
 
-            return 0; // false; // 0  Шаха нет
+            return 0; // 0  Шаха нет
         }
 
         // Метод определяет есть ли мат королю проверяя его на шах по 8ми позициям
@@ -269,7 +243,7 @@ namespace Chess
             // Зная цвет короля (activeColor), находим номер короля в коллекции по его имени
             int numberOfKing = activeColor == "White" ? ChessModel.GetNumberFigure(Figures, "WhiteKing") : ChessModel.GetNumberFigure(Figures, "BlackKing");
 
-            int temp_x = Figures[numberOfKing].x; //Запомним текущие координаты короля
+            int temp_x = Figures[numberOfKing].x; // Запомним текущие координаты короля
             int temp_y = Figures[numberOfKing].y;
 
             // Локальная функция для избежания дублирования кода
